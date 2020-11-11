@@ -54,19 +54,5 @@ public class StatisticMissionController {
         } catch (Exception ex) {
             LOGGER.error(ex.getMessage());
         }
-        /*switch (choice) {
-            case 1:
-                serializeByType(CrewMember.class);
-                break;
-            case 2:
-                serializeByType(Spaceship.class);
-                break;
-            case 3:
-                serializeByType(FlightMission.class);
-                break;
-            default:
-                System.out.println("Incorrect input!!!\n");
-                break;
-        }*/
     }
 }
