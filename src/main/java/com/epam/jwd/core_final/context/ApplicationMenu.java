@@ -1,11 +1,9 @@
 package com.epam.jwd.core_final.context;
 
 import com.epam.jwd.core_final.Controller.*;
-import com.epam.jwd.core_final.context.impl.NassaContext;
 import com.epam.jwd.core_final.domain.ApplicationProperties;
 import com.epam.jwd.core_final.util.ShortReader;
 
-import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalDateTime;
 
@@ -48,7 +46,7 @@ public class ApplicationMenu {
             }
             Duration duration = Duration.between(now, LocalDateTime.now());
             Long long1 = duration.getSeconds();
-            if(duration.getSeconds() >= ApplicationProperties.getFileRefreshRate()){
+            if (duration.getSeconds() >= ApplicationProperties.getFileRefreshRate()) {
                 MissionResultController.checkMissionsResult();
                 System.out.println("CHECK MISSIONS RESULT");
                 now = LocalDateTime.now();
