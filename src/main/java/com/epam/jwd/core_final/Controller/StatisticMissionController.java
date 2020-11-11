@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.util.Map;
 import java.util.Scanner;
 
 public class StatisticMissionController {
@@ -27,12 +28,12 @@ public class StatisticMissionController {
             if (mission == null) {
                 System.out.println("Cannot find mission: mission with this name does not exist");
             } else {
-                Long distance = mission.getDistance();
                 System.out.println("Enter statistics time(in seconds):");
                 duration = Long.parseLong(scanner.nextLine());
                 System.out.println(String.format("Mission name: %s\n SpaceShip name : %s total mission distance : %d",
                         mission.getMissionName(), mission.getAssignedSpaceShift().getName(), mission.getDistance()));
                 Duration durationTime = Duration.between(mission.getStartDate(), mission.getEndDate());
+                System.out.println(durationTime.getSeconds());
                 long passedTime;
                 long percentCompleted;
                 String msg;
@@ -43,7 +44,7 @@ public class StatisticMissionController {
                         msg = "Mission end";
                     } else {
                         passedTime = Duration.between(mission.getStartDate(), LocalDateTime.now()).getSeconds();
-                        percentCompleted = passedTime / (durationTime.getSeconds() / 100);
+                        percentCompleted = (long) (passedTime / ((double)durationTime.getSeconds() / 100));
                         msg = percentCompleted + "%";
                     }
                     System.out.println(String.format("%s [ %s ] %s", mission.getStartDate(), msg, mission.getEndDate()));
