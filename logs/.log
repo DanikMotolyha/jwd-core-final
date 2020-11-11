@@ -1,1 +1,15 @@
-2020-11-11 11:56:45,912 INFO com.epam.jwd.core_final.context.Application [main] End app.
+2020-11-11 21:57:22,389 ERROR com.epam.jwd.core_final.service.impl.SpaceshipServiceImpl [main] Duplicate :
+object :SpaceShip Wolf, flightDistance : 923804, isReadyForNextMissions: true
+MISSION_SPECIALIST: 5
+FLIGHT_ENGINEER: 6
+PILOT: 2
+COMMANDER: 3
+
+2020-11-11 21:59:37,466 INFO com.epam.jwd.core_final.context.Application [main] Start app.
+2020-11-11 21:59:37,581 ERROR com.epam.jwd.core_final.service.impl.SpaceshipServiceImpl [main] Duplicate :
+object :SpaceShip Wolf, flightDistance : 923804, isReadyForNextMissions: true
+MISSION_SPECIALIST: 5
+FLIGHT_ENGINEER: 6
+PILOT: 2
+COMMANDER: 3
+

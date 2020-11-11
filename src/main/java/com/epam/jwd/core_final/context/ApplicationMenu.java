@@ -20,6 +20,7 @@ public class ApplicationMenu {
                     "3 - Create mission\n" +
                     "4 - Serialize . . .\n" +
                     "5 - Cancel mission\n" +
+                    "6 - Take statistic mission\n" +
                     "0 - Close app\n");
             switch (shortInput) {
                 case 0:
@@ -39,6 +40,9 @@ public class ApplicationMenu {
                     break;
                 case 5:
                     CancelMissionController.start();
+                    break;
+                case 6:
+                    StatisticMissionController.start();
                     break;
                 default:
                     System.out.println("Incorrect input!!!\n");
